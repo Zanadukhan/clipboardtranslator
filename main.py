@@ -4,7 +4,7 @@ import sys
 import tkinter as tk
 import time
 import os
-auth_key = "insert deepl api key here"
+auth_key = "insert api key here"
 recent_value = ''
 
 deepl_api = Translator(auth_key)
