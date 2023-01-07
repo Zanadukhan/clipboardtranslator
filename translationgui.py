@@ -1,7 +1,7 @@
 import tkinter as tk
 
 class TranslationGui(tk.Tk):
-    def __init__(self):
+    def __init__(self, limit):
         super().__init__()
         self.geometry('700x500')
         self.title('Clipboard Translator')
@@ -22,3 +22,10 @@ class TranslationGui(tk.Tk):
                                     )
         self.trans_output.insert('1.0', 'Waiting for new translation...')
         self.trans_output.place(x=20, y=50, anchor='nw')
+
+        self.char_limit = tk.Label(self,
+                                   text=limit,
+                                   font=('Arial', 15),
+                                   justify='right'
+                                   )
+        self.char_limit.place(x=400, y=20)
