@@ -1,13 +1,10 @@
-import deepl
 from deepl import Translator
 import pyperclip
-import sys
 import tkinter as tk
-import time
 import os
 from translationgui import TranslationGui
 
-auth_key = "5630947a-19a7-cda6-995f-eff1c4e8a330:fx"
+auth_key = os.environ.get('DEEPL_KEY')
 recent_value = ''
 
 deepl_api = Translator(auth_key)
